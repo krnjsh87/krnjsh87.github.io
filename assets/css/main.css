@@ -93,7 +93,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #fdfee9;
+		background: #f4f6f8;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -110,7 +110,7 @@ input, select, textarea {
 /* Type */
 
 	body, input, select, textarea {
-		color: #042698;
+		color: #1f3a5f;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
@@ -157,7 +157,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #042698;
+		color: #1f3a5f;
 		font-weight: bold;
 	}
 
@@ -170,7 +170,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #042698;
+		color: #1f3a5f;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.5em 0;
@@ -192,10 +192,10 @@ input, select, textarea {
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #fdfee9, #042698);
-				background-image: -webkit-linear-gradient(to right, #fdfee9, #042698);
-				background-image: -ms-linear-gradient(to right, #fdfee9, #042698);
-				background-image: linear-gradient(to right, #fdfee9, #042698);
+				background-image: -moz-linear-gradient(to right, #fdfee9, #1f3a5f);
+				background-image: -webkit-linear-gradient(to right, #fdfee9, #1f3a5f);
+				background-image: -ms-linear-gradient(to right, #fdfee9, #1f3a5f);
+				background-image: linear-gradient(to right, #fdfee9, #1f3a5f);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -1830,7 +1830,7 @@ input, select, textarea {
 		border: solid 1px !important;
 		border-color: rgba(255, 255, 255, 0.15) !important;
 		border-radius: 3em;
-		color: #042698 !important;
+		color: #1f3a5f !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.6em;
@@ -1861,7 +1861,7 @@ input, select, textarea {
 			-webkit-transition: opacity 0.2s ease, -webkit-transform 0.2s ease;
 			-ms-transition: opacity 0.2s ease, -ms-transform 0.2s ease;
 			transition: opacity 0.2s ease, transform 0.2s ease;
-			background: #042698;
+			background: #1f3a5f;
 			border-radius: 3em;
 			content: '';
 			height: 100%;
@@ -1909,7 +1909,7 @@ input, select, textarea {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #042698;
+			background-color: #1f3a5f;
 			color: #312450 !important;
 		}
 
@@ -1960,7 +1960,7 @@ input, select, textarea {
 			input[type="button"]:hover:active,
 			button:hover:active,
 			.button:hover:active {
-				border-color: #042698 !important;
+				border-color: #1f3a5f !important;
 			}
 
 				input[type="submit"]:hover:active:after,
@@ -2290,7 +2290,7 @@ input, select, textarea {
 		}
 
 	label {
-		color: #042698;
+		color: #1f3a5f;
 		font-weight: bold;
 		line-height: 1.5;
 		margin: 0 0 0.7em 0;
@@ -2335,8 +2335,8 @@ input, select, textarea {
 		input[type="tel"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #042698;
-			box-shadow: 0 0 0 1px #042698;
+			border-color: #1f3a5f;
+			box-shadow: 0 0 0 1px #1f3a5f;
 		}
 
 	select {
@@ -2350,7 +2350,7 @@ input, select, textarea {
 	}
 
 		select option {
-			color: #042698;
+			color: #1f3a5f;
 			background: #312450;
 		}
 
@@ -2437,16 +2437,16 @@ input, select, textarea {
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #042698;
-			border-color: #042698;
-			color: #042698;
+			background: #1f3a5f;
+			border-color: #1f3a5f;
+			color: #1f3a5f;
 			content: '\f00c';
 		}
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #042698;
-			box-shadow: 0 0 0 1px #042698;
+			border-color: #1f3a5f;
+			box-shadow: 0 0 0 1px #1f3a5f;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2518,7 +2518,7 @@ input, select, textarea {
 			width: 2.5em;
 			height: 2.5em;
 			display: block;
-			background: #042698;
+			background: #1f3a5f;
 			border-radius: 100%;
 			color: #312450;
 			text-align: center;
@@ -3152,7 +3152,7 @@ input, select, textarea {
 		}
 
 		table th {
-			color: #042698;
+			color: #1f3a5f;
 			font-size: 1em;
 			font-weight: bold;
 			padding: 0 0.75em 0.75em 0.75em;
@@ -3371,7 +3371,7 @@ input, select, textarea {
 
 		#header > .title {
 			border: 0;
-			color: #042698;
+			color: #1f3a5f;
 			display: block;
 			font-size: 1.25em;
 			font-weight: bold;
@@ -3416,7 +3416,7 @@ input, select, textarea {
 						}
 
 						#header > nav > ul > li a.active {
-							color: #042698;
+							color: #1f3a5f;
 						}
 
 		@media screen and (max-width: 736px) {
@@ -3731,7 +3731,7 @@ input, select, textarea {
 			-ms-transition: color 0.2s ease;
 			transition: color 0.2s ease;
 			border: 0;
-			color: #042698;
+			color: #1f3a5f;
 			display: block;
 			font-size: 0.6em;
 			font-weight: bold;
@@ -3759,10 +3759,10 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:after {
-				background-image: -moz-linear-gradient(to right, #fdfee9, #042698);
-				background-image: -webkit-linear-gradient(to right, #fdfee9, #042698);
-				background-image: -ms-linear-gradient(to right, #fdfee9, #042698);
-				background-image: linear-gradient(to right, #fdfee9, #042698);
+				background-image: -moz-linear-gradient(to right, #fdfee9, #1f3a5f);
+				background-image: -webkit-linear-gradient(to right, #fdfee9, #1f3a5f);
+				background-image: -ms-linear-gradient(to right, #fdfee9, #1f3a5f);
+				background-image: linear-gradient(to right, #fdfee9, #1f3a5f);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -3775,7 +3775,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a.active {
-				color: #042698;
+				color: #1f3a5f;
 			}
 
 				#sidebar nav a.active:after {
