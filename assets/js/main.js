@@ -10,6 +10,56 @@
 		$body = $('body'),
 		$sidebar = $('#sidebar');
 
+	var STORAGE_KEY = 'site-theme';
+	var THEME_VALUES = { system: true, light: true, dark: true };
+	var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+	function normalizeTheme(value) {
+		return THEME_VALUES[value] ? value : 'system';
+	}
+
+	function getStoredTheme() {
+		return normalizeTheme(window.localStorage.getItem(STORAGE_KEY));
+	}
+
+	function getEffectiveTheme(mode) {
+		if (mode === 'dark' || mode === 'light')
+			return mode;
+
+		return mediaQuery.matches ? 'dark' : 'light';
+	}
+
+	function applyTheme(mode) {
+		var normalized = normalizeTheme(mode);
+		var effective = getEffectiveTheme(normalized);
+		var selector = document.getElementById('theme-select');
+
+		document.documentElement.setAttribute('data-theme', effective);
+
+		if (normalized === 'system')
+			window.localStorage.removeItem(STORAGE_KEY);
+		else
+			window.localStorage.setItem(STORAGE_KEY, normalized);
+
+		if (selector && selector.value !== normalized)
+			selector.value = normalized;
+	}
+
+	function initializeThemePicker() {
+		var selector = document.getElementById('theme-select');
+		var initialTheme = getStoredTheme();
+
+		document.documentElement.setAttribute('data-theme', getEffectiveTheme(initialTheme));
+
+		if (!selector)
+			return;
+
+		selector.value = initialTheme;
+		selector.addEventListener('change', function(event) {
+			applyTheme(event.target.value);
+		});
+	}
+
 	// Breakpoints.
 		breakpoints({
 			xlarge:   [ '1281px',  '1680px' ],
@@ -29,6 +79,17 @@
 				$body.removeClass('is-preload');
 			}, 100);
 		});
+
+	initializeThemePicker();
+
+	mediaQuery.addEventListener('change', function() {
+		if (getStoredTheme() === 'system')
+			document.documentElement.setAttribute('data-theme', getEffectiveTheme('system'));
+	});
+
+	var currentYearEl = document.getElementById('current-year');
+	if (currentYearEl)
+		currentYearEl.textContent = new Date().getFullYear();
 
 	// Forms.
 

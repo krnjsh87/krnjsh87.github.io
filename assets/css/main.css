@@ -4055,3 +4055,217 @@ a {
 .project-title {
     display: none;
 }
+
+/* Theme switcher UI (light mode keeps live look) */
+.theme-control-item {
+	margin-top: 0.9em !important;
+}
+
+.theme-control-label {
+	display: block;
+	font-size: 0.6em;
+	font-weight: bold;
+	letter-spacing: 0.25em;
+	line-height: 1.6;
+	text-transform: uppercase;
+	color: #1f3a5f;
+	margin-bottom: 0.55em;
+}
+
+#sidebar .theme-select {
+	display: block;
+	width: 100%;
+	background: transparent;
+	border: solid 1px rgba(255, 255, 255, 0.35);
+	color: #1f3a5f;
+	border-radius: 0.25em;
+	font-size: 0.6em;
+	font-weight: bold;
+	height: 2.5em;
+	letter-spacing: 0.18em;
+	padding: 0 2.5em 0 0.8em;
+	text-transform: uppercase;
+	background-image: none;
+	text-align: right;
+	text-align-last: right;
+}
+
+#sidebar .theme-select:focus {
+	border-color: #ffffff;
+	outline: none;
+}
+
+#sidebar .theme-select option {
+	background: #fdfee9;
+	color: #1f3a5f;
+	text-align: right;
+}
+
+@media screen and (max-width: 1280px) {
+	.theme-control-item {
+		margin-top: 0 !important;
+		display: flex !important;
+		align-items: center;
+		gap: 0.6em;
+	}
+
+	.theme-control-label {
+		margin: 0;
+		font-size: 0.5em;
+	}
+
+	#sidebar .theme-select {
+		width: auto;
+		min-width: 8.6em;
+		height: 2.2em;
+		padding-right: 2em;
+	}
+}
+
+/* Dark theme overrides (scoped only to dark) */
+:root[data-theme="dark"] {
+	color-scheme: dark;
+}
+
+:root[data-theme="dark"] body {
+	background: #0b1220;
+	color: #d9e6ff;
+}
+
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] h2,
+:root[data-theme="dark"] h3,
+:root[data-theme="dark"] h4,
+:root[data-theme="dark"] h5,
+:root[data-theme="dark"] h6,
+:root[data-theme="dark"] strong,
+:root[data-theme="dark"] b {
+	color: #aecdff;
+}
+
+:root[data-theme="dark"] a {
+	color: #9ec3ff;
+}
+
+:root[data-theme="dark"] .wrapper a:hover {
+	color: #c8dcff;
+}
+
+:root[data-theme="dark"] #sidebar {
+	background: #0d1830;
+}
+
+:root[data-theme="dark"] #sidebar nav a {
+	color: #d9e6ff;
+}
+
+:root[data-theme="dark"] #sidebar nav a:before {
+	background: rgba(217, 230, 255, 0.16);
+}
+
+:root[data-theme="dark"] #sidebar nav a:after {
+	background-image: linear-gradient(to right, #2b4f88, #7db3ff);
+}
+
+:root[data-theme="dark"] #sidebar nav a.active {
+	color: #b8d2ff;
+}
+
+:root[data-theme="dark"] #sidebar nav a:hover,
+:root[data-theme="dark"] #sidebar a:hover {
+	color: #ffffff;
+}
+
+:root[data-theme="dark"] .wrapper.style1,
+:root[data-theme="dark"] .wrapper.style1-alt,
+:root[data-theme="dark"] .wrapper.style2,
+:root[data-theme="dark"] .wrapper.style2-alt,
+:root[data-theme="dark"] .wrapper.style3,
+:root[data-theme="dark"] .wrapper.style3-alt {
+	background-color: #111a2e;
+}
+
+:root[data-theme="dark"] .spotlights>section:nth-child(2),
+:root[data-theme="dark"] .spotlights>section:nth-child(3) {
+	background-color: rgba(217, 230, 255, 0.06);
+}
+
+:root[data-theme="dark"] .features section {
+	border-color: rgba(217, 230, 255, 0.16);
+}
+
+:root[data-theme="dark"] .features {
+	background: transparent;
+}
+
+:root[data-theme="dark"] .spotlights>section>.image:before {
+	background: rgba(8, 15, 30, 0.58);
+}
+
+:root[data-theme="dark"] input[type="text"],
+:root[data-theme="dark"] input[type="password"],
+:root[data-theme="dark"] input[type="email"],
+:root[data-theme="dark"] input[type="tel"],
+:root[data-theme="dark"] select,
+:root[data-theme="dark"] textarea {
+	background: rgba(217, 230, 255, 0.08);
+	border-color: rgba(158, 195, 255, 0.32);
+	color: #e7f0ff;
+}
+
+:root[data-theme="dark"] input[type="text"]:focus,
+:root[data-theme="dark"] input[type="password"]:focus,
+:root[data-theme="dark"] input[type="email"]:focus,
+:root[data-theme="dark"] input[type="tel"]:focus,
+:root[data-theme="dark"] select:focus,
+:root[data-theme="dark"] textarea:focus {
+	border-color: #9ec3ff;
+}
+
+:root[data-theme="dark"] .button,
+:root[data-theme="dark"] button,
+:root[data-theme="dark"] input[type="submit"],
+:root[data-theme="dark"] input[type="reset"],
+:root[data-theme="dark"] input[type="button"] {
+	background: #2b4f88;
+	border-color: #7db3ff !important;
+	color: #f1f6ff !important;
+}
+
+:root[data-theme="dark"] #footer {
+	background: #111a2e;
+}
+
+:root[data-theme="dark"] #footer > .inner .menu {
+	color: rgba(217, 230, 255, 0.72);
+}
+
+:root[data-theme="dark"] #footer > .inner a {
+	color: #b8d2ff;
+}
+
+:root[data-theme="dark"] #sidebar .theme-control-label {
+	color: #d9e6ff;
+}
+
+:root[data-theme="dark"] #sidebar .theme-select {
+	border-color: rgba(217, 230, 255, 0.35);
+	color: #d9e6ff;
+	background: rgba(217, 230, 255, 0.06);
+}
+
+:root[data-theme="dark"] #sidebar .theme-select option {
+	background: #17253f;
+	color: #e7f0ff;
+}
+
+/* Keep intro CV button clearly visible in light/system-light mode */
+:root:not([data-theme="dark"]) .button,
+:root:not([data-theme="dark"]) button,
+:root:not([data-theme="dark"]) input[type="submit"],
+:root:not([data-theme="dark"]) input[type="reset"],
+:root:not([data-theme="dark"]) input[type="button"] {
+	background: #1f3a5f;
+	border-color: #1f3a5f !important;
+	color: #fdfee9 !important;
+}
