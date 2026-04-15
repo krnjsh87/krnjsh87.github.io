@@ -4053,7 +4053,7 @@ a {
 }
 
 .project-title {
-    display: none;
+	display: none;
 }
 
 /* Theme switcher UI (light mode keeps live look) */
@@ -4236,11 +4236,11 @@ a {
 	background: #111a2e;
 }
 
-:root[data-theme="dark"] #footer > .inner .menu {
+:root[data-theme="dark"] #footer>.inner .menu {
 	color: rgba(217, 230, 255, 0.72);
 }
 
-:root[data-theme="dark"] #footer > .inner a {
+:root[data-theme="dark"] #footer>.inner a {
 	color: #b8d2ff;
 }
 
@@ -4377,4 +4377,3 @@ body.detail-page #footer {
 :root[data-theme="dark"] .related-links {
 	border-top-color: rgba(217, 230, 255, 0.25);
 }
-
