@@ -29,12 +29,25 @@
 		return mediaQuery.matches ? 'dark' : 'light';
 	}
 
+	function applyThemeAssets(effectiveTheme) {
+		var profileImg = document.getElementById('profile-pic');
+		var favicon = document.querySelector('link[rel="icon"]');
+		var imagePath = effectiveTheme === 'dark' ? '/images/profile_dark.png' : '/images/profile_light.png';
+
+		if (profileImg)
+			profileImg.setAttribute('src', imagePath);
+
+		if (favicon)
+			favicon.setAttribute('href', imagePath);
+	}
+
 	function applyTheme(mode) {
 		var normalized = normalizeTheme(mode);
 		var effective = getEffectiveTheme(normalized);
 		var selector = document.getElementById('theme-select');
 
 		document.documentElement.setAttribute('data-theme', effective);
+		applyThemeAssets(effective);
 
 		if (normalized === 'system')
 			window.localStorage.removeItem(STORAGE_KEY);
@@ -48,8 +61,10 @@
 	function initializeThemePicker() {
 		var selector = document.getElementById('theme-select');
 		var initialTheme = getStoredTheme();
+		var effective = getEffectiveTheme(initialTheme);
 
-		document.documentElement.setAttribute('data-theme', getEffectiveTheme(initialTheme));
+		document.documentElement.setAttribute('data-theme', effective);
+		applyThemeAssets(effective);
 
 		if (!selector)
 			return;
@@ -83,8 +98,11 @@
 	initializeThemePicker();
 
 	mediaQuery.addEventListener('change', function() {
-		if (getStoredTheme() === 'system')
-			document.documentElement.setAttribute('data-theme', getEffectiveTheme('system'));
+		if (getStoredTheme() === 'system') {
+			var effective = getEffectiveTheme('system');
+			document.documentElement.setAttribute('data-theme', effective);
+			applyThemeAssets(effective);
+		}
 	});
 
 	var currentYearEl = document.getElementById('current-year');
